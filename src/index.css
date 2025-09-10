@@ -1,0 +1,72 @@
+/* Garden Planner 101 - Additional styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fffe;
+  min-height: 100vh;
+}
+
+/* Mobile-first responsive improvements */
+@media (max-width: 640px) {
+  main {
+    margin: 10px auto !important;
+    padding: 15px !important;
+  }
+  
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Plant grid responsive adjustments */
+  .plant-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+    gap: 8px !important;
+  }
+  
+  .plant-card {
+    padding: 12px !important;
+  }
+  
+  .plant-emoji {
+    font-size: 24px !important;
+  }
+  
+  /* Button adjustments for mobile */
+  button {
+    min-height: 44px; /* iOS touch target size */
+    touch-action: manipulation;
+  }
+  
+  select {
+    min-height: 44px !important;
+  }
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) {
+  .plant-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  button:hover {
+    filter: brightness(1.05);
+  }
+}
+
+/* Print styles */
+@media print {
+  button {
+    display: none !important;
+  }
+  
+  main {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+}
