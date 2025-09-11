@@ -119,6 +119,138 @@ export const plants = [
       zone7: 'Feb 20'
     },
     difficulty: 'easy'
+  },
+  {
+    id: 'broccoli',
+    name: 'Broccoli',
+    emoji: '🥦',
+    plantDates: {
+      zone4: 'Apr 20',
+      zone5: 'Apr 5',
+      zone6: 'Mar 20',
+      zone7: 'Mar 5'
+    },
+    difficulty: 'medium'
+  },
+  {
+    id: 'cabbage',
+    name: 'Cabbage',
+    emoji: '🥬',
+    plantDates: {
+      zone4: 'Apr 15',
+      zone5: 'Apr 1',
+      zone6: 'Mar 15',
+      zone7: 'Mar 1'
+    },
+    difficulty: 'medium'
+  },
+  {
+    id: 'zucchini',
+    name: 'Zucchini',
+    emoji: '🥒',
+    plantDates: {
+      zone4: 'May 25',
+      zone5: 'May 15',
+      zone6: 'May 1',
+      zone7: 'Apr 15'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'onions',
+    name: 'Onions',
+    emoji: '🧅',
+    plantDates: {
+      zone4: 'Apr 15',
+      zone5: 'Apr 1',
+      zone6: 'Mar 15',
+      zone7: 'Mar 1'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'basil',
+    name: 'Basil',
+    emoji: '🌿',
+    plantDates: {
+      zone4: 'May 20',
+      zone5: 'May 10',
+      zone6: 'Apr 25',
+      zone7: 'Apr 10'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'kale',
+    name: 'Kale',
+    emoji: '🥬',
+    plantDates: {
+      zone4: 'Apr 10',
+      zone5: 'Mar 25',
+      zone6: 'Mar 10',
+      zone7: 'Feb 25'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'beets',
+    name: 'Beets',
+    emoji: '🟣',
+    plantDates: {
+      zone4: 'Apr 20',
+      zone5: 'Apr 5',
+      zone6: 'Mar 20',
+      zone7: 'Mar 5'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'peas',
+    name: 'Garden Peas',
+    emoji: '🟢',
+    plantDates: {
+      zone4: 'Apr 1',
+      zone5: 'Mar 15',
+      zone6: 'Mar 1',
+      zone7: 'Feb 15'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'squash',
+    name: 'Summer Squash',
+    emoji: '🥒',
+    plantDates: {
+      zone4: 'May 25',
+      zone5: 'May 15',
+      zone6: 'May 1',
+      zone7: 'Apr 15'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'cilantro',
+    name: 'Cilantro',
+    emoji: '🌿',
+    plantDates: {
+      zone4: 'Apr 15',
+      zone5: 'Apr 1',
+      zone6: 'Mar 15',
+      zone7: 'Mar 1'
+    },
+    difficulty: 'easy'
+  },
+  {
+    id: 'arugula',
+    name: 'Arugula',
+    emoji: '🥬',
+    plantDates: {
+      zone4: 'Apr 1',
+      zone5: 'Mar 15',
+      zone6: 'Mar 1',
+      zone7: 'Feb 15'
+    },
+    difficulty: 'easy'
   }
 ];
 

@@ -5,6 +5,7 @@ export default function App() {
   const [selectedZone, setSelectedZone] = useState('')
   const [selectedPlants, setSelectedPlants] = useState([])
   const [step, setStep] = useState('zone') // 'zone', 'plants', 'results'
+  const [searchTerm, setSearchTerm] = useState('')
 
   const handlePlantToggle = (plantId) => {
     setSelectedPlants(prev => 
@@ -13,6 +14,11 @@ export default function App() {
         : [...prev, plantId]
     )
   }
+
+  const filteredPlants = plants.filter(plant =>
+    plant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    plant.difficulty.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   const getPlantingInfo = () => {
     return selectedPlants.map(plantId => {
@@ -96,16 +102,37 @@ export default function App() {
               ← Back
             </button>
           </div>
+          <input
+            type="text"
+            placeholder="Search plants... (e.g., tomatoes, easy)"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '12px',
+              fontSize: '16px',
+              border: '2px solid #ddd',
+              borderRadius: '8px',
+              marginBottom: '15px',
+              boxSizing: 'border-box'
+            }}
+          />
           <p style={{ color: '#666', marginBottom: '20px' }}>
-            Click plants to add them to your garden plan
+            Click plants to add them to your garden plan ({filteredPlants.length} of {plants.length} vegetables shown)
           </p>
           <div className="plant-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-            gap: '12px',
-            marginBottom: '30px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
+            gap: '10px',
+            marginBottom: '30px',
+            maxHeight: '400px',
+            overflowY: 'auto',
+            padding: '10px',
+            border: '1px solid #eee',
+            borderRadius: '12px',
+            backgroundColor: '#fafafa'
           }}>
-            {plants.map(plant => (
+            {filteredPlants.map(plant => (
               <div 
                 key={plant.id}
                 className="plant-card"
