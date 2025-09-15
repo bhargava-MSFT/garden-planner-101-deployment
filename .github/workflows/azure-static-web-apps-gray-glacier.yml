@@ -33,8 +33,8 @@ jobs:
       - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # Using deployment token for garden-planner2 Static Web App
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          # Direct token for debugging - will replace with secret after success
+          azure_static_web_apps_api_token: d64599a1567396afdb02f6e76eb2f9a09e383bfc2d3673c4c06c42fef37248e501-55e93f44-5ca0-4c0c-8609-19d843ed972500f0312039e6ef0f
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
           app_location: "/"
@@ -50,5 +50,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          azure_static_web_apps_api_token: d64599a1567396afdb02f6e76eb2f9a09e383bfc2d3673c4c06c42fef37248e501-55e93f44-5ca0-4c0c-8609-19d843ed972500f0312039e6ef0f
           action: "close"
