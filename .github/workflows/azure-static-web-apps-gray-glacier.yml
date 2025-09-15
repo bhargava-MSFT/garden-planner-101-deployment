@@ -29,8 +29,9 @@ jobs:
       - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # Create this repo secret with the deployment token from the Static Web App: AZURE_STATIC_WEB_APPS_API_TOKEN
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          # Using original auto-generated secret name; ensure it exists under repo Settings > Secrets > Actions
+          # Later you can rename to AZURE_STATIC_WEB_APPS_API_TOKEN if you add that generic secret.
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_GLACIER_039E6EF0F }}
           action: upload
           app_location: /
           api_location: ""
@@ -44,5 +45,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_GLACIER_039E6EF0F }}
           action: close
